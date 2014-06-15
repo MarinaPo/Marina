@@ -1,0 +1,32 @@
+h3
+{
+    margin: 1em 0 0.5em 5em;
+    color: #355681;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: normal;
+    font-family: 'Orienta', sans-serif;
+}
+
+button 
+{
+    margin: 1em 0 0.5em 35em;
+    background: #2E8CE3; /* Цвет фона */
+    padding: 7px 30px; /* Поля вокруг текста */
+    font-size: 13px; /* Размер шрифта */ 
+    font-weight: bold; /* Насыщенность шрифта */
+    color: #FFFFFF; /* Цвет шрифта */
+    text-align: center; /* Надпись на кнопке по центру */
+    border: solid 1px #73C8F0; /* Параметры рамки кнопки */ 
+    cursor: pointer; /* Изменение вида курсора при наведении*/
+}
+
+.fortest
+{
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+#fild
+{
+   margin: 1em 0 0em 15em;
+}

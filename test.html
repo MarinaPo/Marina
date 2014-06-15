@@ -1,0 +1,82 @@
+<html>
+   <title>Тест по JavaScript</title>
+   <link rel="stylesheet" type="text/css" href="testst.css">
+   <SCRIPT LANGUAGE="JavaScript">
+    function processing()
+    {
+     
+      box=document.forms['box'];
+           
+
+      checkName(box.forName.value);
+      checkValue('first');
+      checkValue('second');
+      checkValue('third');
+    }
+
+   function checkName(val)
+   {
+      if (val == "")
+      {
+         alert("Не указано имя");
+         exit();
+      }
+      
+      var reg = /^[A-ZА-Я]{2,}[^\d+*;.,]/;
+      if (reg.test(val))
+
+          midstring = " contains ";
+
+      else
+
+          midstring = " does not contain ";
+      var foo = document.getElementById("fil");
+      foo.appendChild(document.createTextNode(val+midstring));
+   }
+
+   function checkValue(val)
+   {
+      f=false;
+      for(i=0; i<box[val].length; i++)
+      {
+         if(box[val][i].checked)
+         {
+            f=true;
+            break;
+         }
+      }
+      
+      if (!f)
+      {
+         alert("Нет ответа на "+val+" вопрос");
+         exit();
+      }
+   }
+   </SCRIPT>
+<form id="box" name="box">
+     
+        <h3>Тест</h3>
+        <p>Имя пользователя</p>
+        <input id="fild" name="forName"></input>
+        <div id="fil"></div>
+        <OL> 
+        <LI>Что не входит в состав объектной модели браузера?<br>
+        <input type="Radio" name="first" value="1">Window<br>
+	<input type="Radio" name="first" value="2">Document<br>
+	<input type="Radio" name="first" value="3">Свойство<br>
+
+	<LI>Объект, представляющий текущее окно браузера?<br>
+        <input type="Radio" name="second" value="1">Window<br>
+	<input type="Radio" name="second" value="2">Button<br>
+	<input type="Radio" name="second" value="3">Div<br>   
+  
+        <LI>Функция, которая возвращает символ, находящийся в заданной позиции строки?<br>
+        <input type="Radio" name="third" value="1">indexOf(arg1[,arg2])<br>
+	<input type="Radio" name="third" value="2">charAt()<br>
+	<input type="Radio" name="third" value="3">lastindexOf( arg1 [,arg2])<br>
+        </OL> 
+   
+	<button onClick='processing()'>Отправить</button>
+
+</form>
+</html>
